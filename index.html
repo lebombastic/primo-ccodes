@@ -34,7 +34,7 @@
         	@apply opacity-100;
         } */
           @media (min-width: 1536px) {
-            #component-piyrt section {
+            #component-jlvdy section {
               display: block;
               padding-top: 3rem;
               padding-bottom: 3rem;
@@ -43,12 +43,12 @@
               padding-right: 2rem;
               padding-left: 2rem;
             }
-              #component-piyrt section figure {
+              #component-jlvdy section figure {
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 1rem;
               }
-                #component-piyrt section figure a {
+                #component-jlvdy section figure a {
                   height: 16rem;
                   position: relative;
                   overflow: hidden;
@@ -57,7 +57,7 @@
                   --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
                   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
                 }
-                #component-piyrt section figure img {
+                #component-jlvdy section figure img {
                   position: absolute;
                   left: 0;
                   right: 0;
@@ -70,7 +70,7 @@
                   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                   transition-duration: 150ms;
                 }
-                #component-piyrt section figure p {
+                #component-jlvdy section figure p {
                   display: flex;
                   position: relative;
                   z-index: 0;
@@ -89,7 +89,7 @@
                   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                   transition-duration: 150ms;
                 }
-                #component-piyrt section figure p:hover {
+                #component-jlvdy section figure p:hover {
                   opacity: 0.7;
                   color: white;
                 }
@@ -102,6 +102,135 @@
         <div>
           <section x-data="{ tab: 'Tab Bar ' }">
             <div class="top-title">
+              <button @click="tab = 'Tab Bar '">
+                <i class="fas fa-home"></i>
+                <span class="hidden md:inline">Tab Bar </span>
+              </button>
+              <button @click="tab = 'Powered by'">
+                <i class="fas fa-rocket"></i>
+                <span class="hidden md:inline">Powered by</span>
+              </button>
+              <button @click="tab = 'Alpine.js'">
+                <i class="fas fa-database"></i>
+                <span class="hidden md:inline">Alpine.js</span>
+              </button>
+            </div>
+            <div class="px-8 py-6 primo-content shadow-xl bg-white">
+              <div x-show="tab === 'Tab Bar '">
+                <h2 id="this-is-a-tab-bar-powered-by-alpinejs">
+                  This is a tab bar powered by Alpine.js
+                </h2>
+                <p>
+                  Tab bars are used to break information up into distinct
+                  sections which are too succinct to warrant their own pages. If
+                  one of the sections were to get too large, it should go on its
+                  own page to avoid cramming a small container full of words.
+                </p>
+              </div>
+              <div x-show="tab === 'Powered by'">
+                <h2 id="all-it-takes-to-use-a-js-library-is-a-single-line">
+                  All it takes to use a JS library is a single line
+                </h2>
+                <p>
+                  Thanks to the magic of
+                  <a href="https://www.skypack.dev/">Skypack</a> and a little
+                  Regex, all you have to do to import and use a JavaScript
+                  library is <code>import Alpine from &#39;alpinejs&#39;</code>.
+                  Skypack send preautomized packages to everyone who visits your
+                  site. Note that JS libraries used this way won&#39;t work in
+                  IE11.
+                </p>
+              </div>
+              <div x-show="tab === 'Alpine.js'">
+                <h2 id="alpine-makes-it-easy-to-sprinkle-in-interactivity">
+                  Alpine makes it easy to sprinkle in interactivity
+                </h2>
+                <p>
+                  <a href="https://github.com/alpinejs/alpine">AlpineJS</a> is
+                  &quot;A rugged, minimal framework for composing JavaScript
+                  behavior in your markup&quot;. Once you use a library in one
+                  component, you can use it from other components without any
+                  additional overhead (since it&#39;s cached from then on).
+                </p>
+              </div>
+            </div>
+          </section>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+          />
+        </div>
+        <script type="module">
+          const primo = {
+            id: 'hjzbe',
+            data: {"items":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}]},
+            fields: [{"id":"zjjgl","key":"items","label":"Tab Items","value":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}],"type":"repeater","fields":[{"id":"wzkhx","key":"title","label":"Title","value":"","type":"text"},{"id":"6tdwy","key":"content","label":"Content","value":"","type":"content"},{"id":"f7rq0","key":"icon","label":"Icon","value":"","type":"text"}]}]
+          }
+          import Alpine from 'https://cdn.skypack.dev/alpinejs'
+        </script>
+      </div>
+      <style type="text/css">
+        #component-cmtly section {
+            max-width: 1536px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+          }
+            #component-cmtly section .top-title {
+              display: flex;
+              flex: 1 1 0%;
+              padding-top: 0.5rem;
+              padding-bottom:0.5rem;
+              font-weight: 600;
+              background-color: rgba(79, 70, 229);
+              transition-property: background-color, border-color, color, fill, stroke;
+              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+              transition-duration: 200ms;
+              color: rgba(243, 244, 246);
+            }
+            #component-cmtly section .top-title button {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                transition-property: background-color, border-color, color, fill, stroke;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 200ms;
+                font-weight: 600;
+                flex: 1 1 0%;
+                border-right-width: 1px;
+                border-color: rgba(99, 102, 241);
+                background-color: rgba(79, 70, 229);
+              }
+            #component-cmtly section .top-title button:focus {
+                background: rgba(67, 56, 202);
+                color: rgba(243, 244, 246);
+                border-color: rgba(67, 56, 202);
+                border-width: 0px;
+              }
+            #component-cmtly section .top-title i {
+                margin-right: 0.25rem;
+              }
+            #component-cmtly section .top-title span {
+                display: inline;
+              }
+      </style>
+    </div>
+
+    <div class="block" id="block-hjzbe">
+      <div class="primo-component" id="component-hjzbe">
+        <div>
+          <div
+            x-data="{ tab: 'Tab Bar ' }"
+            class="container flex flex-col py-12"
+          >
+            <div class="flex bg-indigo-700 font-bold text-gray-100">
               <button
                 class="flex-1 hover:bg-indigo-600 transition-colors duration-200 font-semibold border-r py-2 border-indigo-500"
                 :class="{ 'bg-indigo-600': tab === 'Tab Bar ' }"
@@ -166,7 +295,7 @@
                 </p>
               </div>
             </div>
-          </section>
+          </div>
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -176,41 +305,13 @@
         </div>
         <script type="module">
           const primo = {
-            id: 'zjbca',
+            id: 'hjzbe',
             data: {"items":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}]},
             fields: [{"id":"zjjgl","key":"items","label":"Tab Items","value":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}],"type":"repeater","fields":[{"id":"wzkhx","key":"title","label":"Title","value":"","type":"text"},{"id":"6tdwy","key":"content","label":"Content","value":"","type":"content"},{"id":"f7rq0","key":"icon","label":"Icon","value":"","type":"text"}]}]
           }
           import Alpine from 'https://cdn.skypack.dev/alpinejs'
         </script>
       </div>
-      <style type="text/css">
-        #component-zjbca section {
-            max-width: 1536px;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-            padding-right: 2rem;
-            padding-left: 2rem;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-          }
-            #component-zjbca section .top-title {
-              display: flex;
-              flex: 1 1 0%;
-              padding-top: 0.5rem;
-              padding-bottom:0.5rem;
-              font-weight: 600;
-              border-color: rgba(99, 102, 241);
-              border-right-width: 1px;
-              background-color: rgba(79, 70, 229);
-              transition-property: background-color, border-color, color, fill, stroke;
-              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-              transition-duration: 200ms;
-              color: rgba(243, 244, 246);
-            }
-      </style>
     </div>
   </body>
 </html>
