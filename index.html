@@ -6,6 +6,12 @@
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body data-instant-intensity="all" class="primo-page">
+    <div class="block" id="block-azofj">
+      <div class="primo-copy" id="copy-azofj">
+        <h1>Done (added to Public Library):</h1>
+      </div>
+    </div>
+
     <div class="block" id="block-piyrt">
       <div class="primo-component" id="component-piyrt">
         <div>
@@ -30,69 +36,65 @@
         </div>
       </div>
       <style type="text/css">
-        /* a:hover p, a:focus p {
-        	@apply opacity-100;
-        } */
-          @media (min-width: 1536px) {
-            #component-jlvdy section {
-              display: block;
-              padding-top: 3rem;
-              padding-bottom: 3rem;
-              margin-right: auto;
-              margin-left: auto;
-              padding-right: 2rem;
-              padding-left: 2rem;
+        #component-jlvdy section {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 3rem 2rem;
+          }
+            #component-jlvdy section figure {
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 1rem;
             }
-              #component-jlvdy section figure {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 1rem;
+            #component-jlvdy section figure a {
+                height: 16rem;
+                position: relative;
+                overflow: hidden;
+                border-radius: 0.75rem;
+                background-color: transparent;
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
               }
-                #component-jlvdy section figure a {
-                  height: 16rem;
-                  position: relative;
-                  overflow: hidden;
-                  border-radius: 0.75rem;
-                  background-color: transparent;
-                  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-                  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-                }
-                #component-jlvdy section figure img {
-                  position: absolute;
-                  left: 0;
-                  right: 0;
-                  top: 0;
-                  -o-object-fit: cover;
-                     object-fit: cover;
-                  height: 100%;
-                  width: 100%;
-                  transition-property: opacity;
-                  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                  transition-duration: 150ms;
-                }
-                #component-jlvdy section figure p {
-                  display: flex;
-                  position: relative;
-                  z-index: 0;
-                  width: 100%;
-                  transition-duration: 200ms;
-                  color: rgba(255, 255, 255);
-                  font-size: 1.5rem;
-                  line-height: 2rem;
-                  height: 100%;
-                  font-weight: 700;
-                  justify-content: center;
-                  align-items: center;
-                  background-color: black;
-                  opacity: 0;
-                  transition-property: opacity;
-                  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                  transition-duration: 150ms;
-                }
-                #component-jlvdy section figure p:hover {
-                  opacity: 0.7;
-                  color: white;
-                }
+            #component-jlvdy section figure img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                height: 100%;
+                width: 100%;
+                transition-property: opacity;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 150ms;
+              }
+            #component-jlvdy section figure p {
+                display: flex;
+                position: relative;
+                z-index: 0;
+                width: 100%;
+                transition-duration: 200ms;
+                color: rgba(255, 255, 255);
+                font-size: 1.5rem;
+                line-height: 2rem;
+                height: 100%;
+                font-weight: 700;
+                justify-content: center;
+                align-items: center;
+                background-color: black;
+                opacity: 0;
+                transition-property: opacity;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 150ms;
+              }
+            #component-jlvdy section figure p:hover {
+                opacity: 0.7;
+                color: white;
+              }
+          @media (max-width: 600px) {
+              #component-jlvdy section figure {
+                grid-template-columns: 1fr;
+              }
           }
       </style>
     </div>
@@ -102,20 +104,29 @@
         <div>
           <section x-data="{ tab: 'Tab Bar ' }">
             <div class="top-title">
-              <button @click="tab = 'Tab Bar '">
+              <button
+                @click="tab = 'Tab Bar '"
+                :class="{ active: 'Tab Bar ' === tab }"
+              >
                 <i class="fas fa-home"></i>
-                <span class="hidden md:inline">Tab Bar </span>
+                <span>Tab Bar </span>
               </button>
-              <button @click="tab = 'Powered by'">
+              <button
+                @click="tab = 'Powered by'"
+                :class="{ active: 'Powered by' === tab }"
+              >
                 <i class="fas fa-rocket"></i>
-                <span class="hidden md:inline">Powered by</span>
+                <span>Powered by</span>
               </button>
-              <button @click="tab = 'Alpine.js'">
+              <button
+                @click="tab = 'Alpine.js'"
+                :class="{ active: 'Alpine.js' === tab }"
+              >
                 <i class="fas fa-database"></i>
-                <span class="hidden md:inline">Alpine.js</span>
+                <span>Alpine.js</span>
               </button>
             </div>
-            <div class="px-8 py-6 primo-content shadow-xl bg-white">
+            <div class="content">
               <div x-show="tab === 'Tab Bar '">
                 <h2 id="this-is-a-tab-bar-powered-by-alpinejs">
                   This is a tab bar powered by Alpine.js
@@ -164,7 +175,7 @@
         </div>
         <script type="module">
           const primo = {
-            id: 'hjzbe',
+            id: 'zjbca',
             data: {"items":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}]},
             fields: [{"id":"zjjgl","key":"items","label":"Tab Items","value":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}],"type":"repeater","fields":[{"id":"wzkhx","key":"title","label":"Title","value":"","type":"text"},{"id":"6tdwy","key":"content","label":"Content","value":"","type":"content"},{"id":"f7rq0","key":"icon","label":"Icon","value":"","type":"text"}]}]
           }
@@ -177,12 +188,8 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-            padding-right: 2rem;
-            padding-left: 2rem;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
+            margin: 0 auto;
+            padding: 3rem 2rem;
           }
             #component-cmtly section .top-title {
               display: flex;
@@ -190,7 +197,6 @@
               padding-top: 0.5rem;
               padding-bottom:0.5rem;
               font-weight: 600;
-              background-color: rgba(79, 70, 229);
               transition-property: background-color, border-color, color, fill, stroke;
               transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
               transition-duration: 200ms;
@@ -206,112 +212,247 @@
                 flex: 1 1 0%;
                 border-right-width: 1px;
                 border-color: rgba(99, 102, 241);
-                background-color: rgba(79, 70, 229);
+                background: rgba(79, 70, 229);
               }
-            #component-cmtly section .top-title button:focus {
-                background: rgba(67, 56, 202);
-                color: rgba(243, 244, 246);
-                border-color: rgba(67, 56, 202);
-                border-width: 0px;
-              }
+            #component-cmtly section .top-title button.active, #component-cmtly section .top-title button:hover, #component-cmtly section .top-title button:hover {
+                  background: rgba(67, 56, 202);
+                }
             #component-cmtly section .top-title i {
                 margin-right: 0.25rem;
               }
             #component-cmtly section .top-title span {
                 display: inline;
               }
+            #component-cmtly section .content {
+              padding-left: 2rem;
+              padding-right: 2rem;
+              padding-top: 1.5rem;
+              padding-bottom: 1.5rem;
+              background-color: rgba(255, 255, 255);
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
       </style>
     </div>
 
-    <div class="block" id="block-hjzbe">
-      <div class="primo-component" id="component-hjzbe">
+    <div class="block" id="block-axmia">
+      <div class="primo-component" id="component-axmia">
         <div>
-          <div
-            x-data="{ tab: 'Tab Bar ' }"
-            class="container flex flex-col py-12"
-          >
-            <div class="flex bg-indigo-700 font-bold text-gray-100">
-              <button
-                class="flex-1 hover:bg-indigo-600 transition-colors duration-200 font-semibold border-r py-2 border-indigo-500"
-                :class="{ 'bg-indigo-600': tab === 'Tab Bar ' }"
-                @click="tab = 'Tab Bar '"
-              >
-                <i class="fas fa-home mr-1"></i>
-                <span class="hidden md:inline">Tab Bar </span>
-              </button>
-              <button
-                class="flex-1 hover:bg-indigo-600 transition-colors duration-200 font-semibold border-r py-2 border-indigo-500"
-                :class="{ 'bg-indigo-600': tab === 'Powered by' }"
-                @click="tab = 'Powered by'"
-              >
-                <i class="fas fa-rocket mr-1"></i>
-                <span class="hidden md:inline">Powered by</span>
-              </button>
-              <button
-                class="flex-1 hover:bg-indigo-600 transition-colors duration-200 font-semibold border-r py-2 border-indigo-500"
-                :class="{ 'bg-indigo-600': tab === 'Alpine.js' }"
-                @click="tab = 'Alpine.js'"
-              >
-                <i class="fas fa-database mr-1"></i>
-                <span class="hidden md:inline">Alpine.js</span>
-              </button>
-            </div>
-            <div class="px-8 py-6 primo-content shadow-xl bg-white">
-              <div x-show="tab === 'Tab Bar '">
-                <h2 id="this-is-a-tab-bar-powered-by-alpinejs">
-                  This is a tab bar powered by Alpine.js
-                </h2>
-                <p>
-                  Tab bars are used to break information up into distinct
-                  sections which are too succinct to warrant their own pages. If
-                  one of the sections were to get too large, it should go on its
-                  own page to avoid cramming a small container full of words.
-                </p>
-              </div>
-              <div x-show="tab === 'Powered by'">
-                <h2 id="all-it-takes-to-use-a-js-library-is-a-single-line">
-                  All it takes to use a JS library is a single line
-                </h2>
-                <p>
-                  Thanks to the magic of
-                  <a href="https://www.skypack.dev/">Skypack</a> and a little
-                  Regex, all you have to do to import and use a JavaScript
-                  library is <code>import Alpine from &#39;alpinejs&#39;</code>.
-                  Skypack send preautomized packages to everyone who visits your
-                  site. Note that JS libraries used this way won&#39;t work in
-                  IE11.
-                </p>
-              </div>
-              <div x-show="tab === 'Alpine.js'">
-                <h2 id="alpine-makes-it-easy-to-sprinkle-in-interactivity">
-                  Alpine makes it easy to sprinkle in interactivity
-                </h2>
-                <p>
-                  <a href="https://github.com/alpinejs/alpine">AlpineJS</a> is
-                  &quot;A rugged, minimal framework for composing JavaScript
-                  behavior in your markup&quot;. Once you use a library in one
-                  component, you can use it from other components without any
-                  additional overhead (since it&#39;s cached from then on).
-                </p>
+          <section>
+            <div class="content">
+              <img
+                src="https://images.unsplash.com/photo-1603279312618-5009a6caf08b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt=""
+              />
+              <div class="heads">
+                <h3>Aenean sed adipiscing diam donec</h3>
+                <p>Etiam sit amet nisl purus in mollis</p>
+                <div class="body">
+                  <p>
+                    Aenean sed adipiscing diam donec adipiscing tristique. Enim
+                    neque volutpat ac tincidunt vitae semper quis lectus nulla.
+                    Sed sed risus pretium quam. Etiam sit amet nisl purus in
+                    mollis. Sed cras ornare arcu dui vivamus arcu felis. Dui
+                    accumsan sit amet nulla facilisi morbi. Duis tristique
+                    sollicitudin nibh sit amet commodo nulla facilisi. Sit amet
+                    nulla facilisi morbi.
+                  </p>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#">Tristique</a>
+                  </li>
+                  <li>
+                    <a href="">Commodo</a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-            crossorigin="anonymous"
-          />
+          </section>
         </div>
-        <script type="module">
-          const primo = {
-            id: 'hjzbe',
-            data: {"items":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}]},
-            fields: [{"id":"zjjgl","key":"items","label":"Tab Items","value":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}],"type":"repeater","fields":[{"id":"wzkhx","key":"title","label":"Title","value":"","type":"text"},{"id":"6tdwy","key":"content","label":"Content","value":"","type":"content"},{"id":"f7rq0","key":"icon","label":"Icon","value":"","type":"text"}]}]
-          }
-          import Alpine from 'https://cdn.skypack.dev/alpinejs'
-        </script>
       </div>
+      <style type="text/css">
+        #component-apegd section {
+            min-width: auto;
+            max-width: auto;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+          }
+            #component-apegd section .content {
+              display: flex;
+              flex-direction: row;
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              background-color: rgba(255, 255, 255);
+            }
+            #component-apegd section .content img {
+                display: block;
+                vertical-align: middle;
+                width: 33.333333%;
+                height: auto;
+                -o-object-position: center;
+                   object-position: center;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                max-width: 100%;
+                border-style: solid;
+              }
+            #component-apegd section .content .heads {
+                flex-direction: column;
+                display: flex;
+                color: rgba(31, 41, 55);
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                margin-left: 0.5rem;
+                justify-content: center;
+              }
+            #component-apegd section .content .heads h3 {
+                  font-weight: 600;
+                  font-size: 1.5rem;
+                  line-height: 2rem;
+                }
+            #component-apegd section .content .heads p {
+                  color: rgba(75, 85, 99);
+                }
+            #component-apegd section .content .heads .body {
+                  padding-top: 1rem;
+                  margin-top: 0.5rem;
+                  border-top-width: 1px;
+                  border-color: rgba(229, 231, 235);
+                }
+            #component-apegd section .content .heads ul {
+                  display: flex;
+                  margin-top: 1.5rem;
+                  margin-bottom: 1.5rem;
+                }
+            #component-apegd section .content .heads ul li {
+                    color: rgba(255, 255, 255);
+                    padding-left: 1.25rem;
+                    padding-right: 1.25rem;
+                    padding-top: 0.75rem;
+                    padding-bottom: 0.75rem;
+                    margin-right: 0.5rem;
+                    font-weight: 500;
+                    border-radius: 0.25rem;
+                    background-color: rgba(99, 102, 241);
+                  }
+            #component-apegd section .content .heads ul li:hover {
+                    background-color: rgba(79, 70, 229);
+                  }
+          @media (max-width: 600px) {
+              #component-apegd section .content {
+                flex-direction: column;
+              }
+                #component-apegd section .content img {
+                  width: 100%;
+                }
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-lxbev">
+      <div class="primo-component" id="component-lxbev">
+        <div>
+          <header>
+            <div>
+              <nav>
+                <div>
+                  <a
+                    class="border-transparent hover:border-gray-500 transition-colors duration-200"
+                    href="/"
+                    >Egestas</a
+                  >
+                  <ul class="flex items-center">
+                    <li class="ml-6 font-semibold">
+                      <a
+                        class="border-b-2 border-transparent hover:border-gray-500 transition-colors duration-200"
+                        href=""
+                        >Adipiscing</a
+                      >
+                    </li>
+                    <li class="ml-6 font-semibold">
+                      <a
+                        class="border-b-2 border-transparent hover:border-gray-500 transition-colors duration-200"
+                        href=""
+                        >Commodo</a
+                      >
+                    </li>
+                    <li class="ml-6 font-semibold">
+                      <a
+                        class="border-b-2 border-transparent hover:border-gray-500 transition-colors duration-200"
+                        href=""
+                        >Imperdiet</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <h1
+                class="pb-1 font-bold text-4xl font-semibold leading-none flex"
+              >
+                <svg
+                  class="w-8 h-8 inline-block self-center mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Eu turpis egestas pretium</span>
+              </h1>
+            </div>
+          </header>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-eldms header {
+            color: rgba(255, 255, 255);
+            padding-bottom: 3rem;
+            padding-top: 1rem;
+            background-image: linear-gradient(to right, #6b7280, #9ca3af);
+          }
+            #component-eldms header div {
+              max-width: 1536px;
+              width: 100%;
+              margin-right: auto;
+              margin-left: auto;
+              padding-right: 2rem;
+              padding-left: 2rem;
+            }
+            #component-eldms header div nav {
+                padding-bottom: 2rem;
+              }
+            #component-eldms header div nav div {
+                  display: flex;
+                  justify-content: space-between;
+                }
+            #component-eldms header a {
+              transition-property: background-color, border-color, color, fill, stroke;
+              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+              font-size: 1.5rem;
+              line-height: 2rem;
+              border-bottom-width: 2px;
+              font-weight: 700;
+            }
+            #component-eldms header a:hover {
+              transition-duration: 200ms;
+            }
+      </style>
     </div>
   </body>
 </html>
