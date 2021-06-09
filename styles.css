@@ -201,7 +201,8 @@ select { /* 1 */
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button {
+button,
+[type='button'] {
   -webkit-appearance: button;
 }
 
@@ -242,6 +243,11 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
 
 /**
 Remove the inner padding in Chrome and Safari on macOS.
@@ -572,6 +578,11 @@ video {
   background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
 }
 
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgba(31, 41, 55, var(--tw-border-opacity));
+}
+
 .border-indigo-500 {
   --tw-border-opacity: 1;
   border-color: rgba(99, 102, 241, var(--tw-border-opacity));
@@ -579,6 +590,10 @@ video {
 
 .border-r {
   border-right-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .flex {
@@ -597,6 +612,10 @@ video {
   flex-direction: column;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -609,8 +628,29 @@ video {
   font-weight: 700;
 }
 
+.h-0 {
+  height: 0px;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-2 {
@@ -631,6 +671,10 @@ video {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.relative {
+  position: relative;
 }
 
 * {
@@ -655,6 +699,26 @@ video {
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-colors {

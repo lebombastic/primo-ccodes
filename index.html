@@ -1,470 +1,707 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-  </head>
-  <body data-instant-intensity="all" class="primo-page">
-    <div class="block" id="block-azofj">
-      <div class="primo-copy" id="copy-azofj">
-        <h1>Done (added to Public Library):</h1>
-      </div>
-    </div>
 
-    <div class="block" id="block-piyrt">
-      <div class="primo-component" id="component-piyrt">
-        <div>
-          <section>
-            <figure>
-              <a href="#">
-                <img
-                  src="https://images.unsplash.com/photo-1560505155-1d9db7cc6856?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80"
-                  alt="Space"
-                />
-                <p>Pellentesque</p>
-              </a>
-              <a href="#">
-                <img
-                  src="https://images.unsplash.com/photo-1508355325488-cbf228b98ff9?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1351&amp;q&#x3D;80"
-                  alt=""
-                />
-                <p>Placerat Vestibulum</p>
-              </a>
-            </figure>
-          </section>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        
+        
+        
+      </head>
+      <body data-instant-intensity="all" class="primo-page">   
+        
+        <div class="block" id="block-azofj">
+          <div class="primo-copy" id="copy-azofj">
+            <h1>Done (added to Public Library):</h1>
+          </div>
         </div>
-      </div>
-      <style type="text/css">
-        #component-piyrt section {
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 3rem 2rem;
-          }
-            #component-piyrt section figure {
-              display: grid;
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-              gap: 1rem;
-            }
-            #component-piyrt section figure a {
-                height: 16rem;
-                position: relative;
-                overflow: hidden;
-                border-radius: 0.75rem;
-                background-color: transparent;
-                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-              }
-            #component-piyrt section figure img {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                -o-object-fit: cover;
-                   object-fit: cover;
-                height: 100%;
-                width: 100%;
-                transition-property: opacity;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-duration: 150ms;
-              }
-            #component-piyrt section figure p {
-                display: flex;
-                position: relative;
-                z-index: 0;
-                width: 100%;
-                transition-duration: 200ms;
-                color: rgba(255, 255, 255);
-                font-size: 1.5rem;
-                line-height: 2rem;
-                height: 100%;
-                font-weight: 700;
-                justify-content: center;
-                align-items: center;
-                background-color: black;
-                opacity: 0;
-                transition-property: opacity;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-duration: 150ms;
-              }
-            #component-piyrt section figure p:hover {
-                opacity: 0.7;
-                color: white;
-              }
-          @media (max-width: 600px) {
-              #component-piyrt section figure {
-                grid-template-columns: 1fr;
-              }
-          }
-      </style>
-    </div>
-
-    <div class="block" id="block-zjbca">
-      <div class="primo-component" id="component-zjbca">
-        <div>
-          <section x-data="{ tab: 'Tab Bar ' }">
-            <div class="top-title">
-              <button
-                @click="tab = 'Tab Bar '"
-                :class="{ active: 'Tab Bar ' === tab }"
-              >
-                <i class="fas fa-home"></i>
-                <span>Tab Bar </span>
-              </button>
-              <button
-                @click="tab = 'Powered by'"
-                :class="{ active: 'Powered by' === tab }"
-              >
-                <i class="fas fa-rocket"></i>
-                <span>Powered by</span>
-              </button>
-              <button
-                @click="tab = 'Alpine.js'"
-                :class="{ active: 'Alpine.js' === tab }"
-              >
-                <i class="fas fa-database"></i>
-                <span>Alpine.js</span>
-              </button>
-            </div>
-            <div class="content">
-              <div x-show="tab === 'Tab Bar '">
-                <h2 id="this-is-a-tab-bar-powered-by-alpinejs">
-                  This is a tab bar powered by Alpine.js
-                </h2>
-                <p>
-                  Tab bars are used to break information up into distinct
-                  sections which are too succinct to warrant their own pages. If
-                  one of the sections were to get too large, it should go on its
-                  own page to avoid cramming a small container full of words.
-                </p>
-              </div>
-              <div x-show="tab === 'Powered by'">
-                <h2 id="all-it-takes-to-use-a-js-library-is-a-single-line">
-                  All it takes to use a JS library is a single line
-                </h2>
-                <p>
-                  Thanks to the magic of
-                  <a href="https://www.skypack.dev/">Skypack</a> and a little
-                  Regex, all you have to do to import and use a JavaScript
-                  library is <code>import Alpine from &#39;alpinejs&#39;</code>.
-                  Skypack send preautomized packages to everyone who visits your
-                  site. Note that JS libraries used this way won&#39;t work in
-                  IE11.
-                </p>
-              </div>
-              <div x-show="tab === 'Alpine.js'">
-                <h2 id="alpine-makes-it-easy-to-sprinkle-in-interactivity">
-                  Alpine makes it easy to sprinkle in interactivity
-                </h2>
-                <p>
-                  <a href="https://github.com/alpinejs/alpine">AlpineJS</a> is
-                  &quot;A rugged, minimal framework for composing JavaScript
-                  behavior in your markup&quot;. Once you use a library in one
-                  component, you can use it from other components without any
-                  additional overhead (since it&#39;s cached from then on).
-                </p>
-              </div>
-            </div>
-          </section>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-            crossorigin="anonymous"
-          />
+      
+      <div class="block" id="block-piyrt">
+        <div class="primo-component" id="component-piyrt">
+          <div><section>
+  <figure>
+    <a href="#">
+      <img src="https://images.unsplash.com/photo-1560505155-1d9db7cc6856?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80" alt="Space" />
+      <p>Pellentesque</p>
+    </a>
+    <a href="#">
+      <img src="https://images.unsplash.com/photo-1508355325488-cbf228b98ff9?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1351&amp;q&#x3D;80" alt="" />
+      <p>Placerat Vestibulum</p>
+    </a>
+  </figure>
+</section>
+</div>
+          
         </div>
-        <script type="module">
-          const primo = {
-            id: 'zjbca',
-            data: {"items":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}]},
-            fields: [{"id":"zjjgl","key":"items","label":"Tab Items","value":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}],"type":"repeater","fields":[{"id":"wzkhx","key":"title","label":"Title","value":"","type":"text"},{"id":"6tdwy","key":"content","label":"Content","value":"","type":"content"},{"id":"f7rq0","key":"icon","label":"Icon","value":"","type":"text"}]}]
-          }
-          import Alpine from 'https://cdn.skypack.dev/alpinejs'
-        </script>
+        <style type="text/css">#component-jlvdy section {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3rem 2rem;
+  }
+    #component-jlvdy section figure {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    #component-jlvdy section figure a {
+        height: 16rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        background-color: transparent;
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+    #component-jlvdy section figure img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: 100%;
+        width: 100%;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+    #component-jlvdy section figure p {
+        display: flex;
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        transition-duration: 200ms;
+        color: rgba(255, 255, 255);
+        font-size: 1.5rem;
+        line-height: 2rem;
+        height: 100%;
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        opacity: 0;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+    #component-jlvdy section figure p:hover {
+        opacity: 0.7;
+        color: white;
+      }
+  @media (max-width: 600px) {
+      #component-jlvdy section figure {
+        grid-template-columns: 1fr;
+      }
+  }</style>
       </div>
-      <style type="text/css">
-        #component-zjbca section {
-            max-width: 1536px;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-          }
-            #component-zjbca section .top-title {
-              display: flex;
-              flex: 1 1 0%;
-              padding-top: 0.5rem;
-              padding-bottom:0.5rem;
-              font-weight: 600;
-              transition-property: background-color, border-color, color, fill, stroke;
-              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-              transition-duration: 200ms;
-              color: rgba(243, 244, 246);
-            }
-            #component-zjbca section .top-title button {
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
-                transition-property: background-color, border-color, color, fill, stroke;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-duration: 200ms;
-                font-weight: 600;
-                flex: 1 1 0%;
-                border-right-width: 1px;
-                border-color: rgba(99, 102, 241);
-                background: rgba(79, 70, 229);
-              }
-            #component-zjbca section .top-title button.active, #component-zjbca section .top-title button:hover, #component-zjbca section .top-title button:hover {
-                  background: rgba(67, 56, 202);
-                }
-            #component-zjbca section .top-title i {
-                margin-right: 0.25rem;
-              }
-            #component-zjbca section .top-title span {
-                display: inline;
-              }
-            #component-zjbca section .content {
-              padding-left: 2rem;
-              padding-right: 2rem;
-              padding-top: 1.5rem;
-              padding-bottom: 1.5rem;
-              background-color: rgba(255, 255, 255);
-              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            }
-      </style>
-    </div>
-
-    <div class="block" id="block-axmia">
-      <div class="primo-component" id="component-axmia">
-        <div>
-          <section>
-            <div class="content">
-              <img
-                src="https://images.unsplash.com/photo-1603279312618-5009a6caf08b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt=""
-              />
-              <div class="heads">
-                <h3>Aenean sed adipiscing diam donec</h3>
-                <p>Etiam sit amet nisl purus in mollis</p>
-                <div class="body">
-                  <p>
-                    Aenean sed adipiscing diam donec adipiscing tristique. Enim
-                    neque volutpat ac tincidunt vitae semper quis lectus nulla.
-                    Sed sed risus pretium quam. Etiam sit amet nisl purus in
-                    mollis. Sed cras ornare arcu dui vivamus arcu felis. Dui
-                    accumsan sit amet nulla facilisi morbi. Duis tristique
-                    sollicitudin nibh sit amet commodo nulla facilisi. Sit amet
-                    nulla facilisi morbi.
-                  </p>
-                </div>
-                <ul>
-                  <li>
-                    <a href="#">Tristique</a>
-                  </li>
-                  <li>
-                    <a href="">Commodo</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
+      
+      <div class="block" id="block-zjbca">
+        <div class="primo-component" id="component-zjbca">
+          <div><section x-data="{ tab: 'Tab Bar ' }">
+  <div class="top-title">
+    <button @click="tab = 'Tab Bar '" :class="{ active: 'Tab Bar ' === tab }">
+      <i class="fas fa-home"></i>
+      <span>Tab Bar </span>
+    </button>
+    <button @click="tab = 'Powered by'" :class="{ active: 'Powered by' === tab }">
+      <i class="fas fa-rocket"></i>
+      <span>Powered by</span>
+    </button>
+    <button @click="tab = 'Alpine.js'" :class="{ active: 'Alpine.js' === tab }">
+      <i class="fas fa-database"></i>
+      <span>Alpine.js</span>
+    </button>
+  </div>
+  <div class="content">
+    <div x-show="tab === 'Tab Bar '"><h2 id="this-is-a-tab-bar-powered-by-alpinejs">This is a tab bar powered by Alpine.js</h2>
+<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>
+</div>
+    <div x-show="tab === 'Powered by'"><h2 id="all-it-takes-to-use-a-js-library-is-a-single-line">All it takes to use a JS library is a single line</h2>
+<p>Thanks to the magic of <a href="https://www.skypack.dev/">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>
+</div>
+    <div x-show="tab === 'Alpine.js'"><h2 id="alpine-makes-it-easy-to-sprinkle-in-interactivity">Alpine makes it easy to sprinkle in interactivity</h2>
+<p><a href="https://github.com/alpinejs/alpine">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>
+</div>
+  </div>
+</section>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+  crossorigin="anonymous"
+/>
+</div>
+          <script type="module">
+        const primo = {
+          id: 'zjbca',
+          data: {"items":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}]},
+          fields: [{"id":"zjjgl","key":"items","label":"Tab Items","value":[{"title":"Tab Bar ","content":"<h2 id=\"this-is-a-tab-bar-powered-by-alpinejs\">This is a tab bar powered by Alpine.js</h2>\n<p>Tab bars are used to break information up into distinct sections which are too succinct to warrant their own pages. If one of the sections were to get too large, it should go on its own page to avoid cramming a small container full of words.</p>\n","icon":"home"},{"title":"Powered by","content":"<h2 id=\"all-it-takes-to-use-a-js-library-is-a-single-line\">All it takes to use a JS library is a single line</h2>\n<p>Thanks to the magic of <a href=\"https://www.skypack.dev/\">Skypack</a> and a little Regex, all you have to do to import and use a JavaScript library is <code>import Alpine from &#39;alpinejs&#39;</code>. Skypack send preautomized packages to everyone who visits your site. Note that JS libraries used this way won&#39;t work in IE11.</p>\n","icon":"rocket"},{"title":"Alpine.js","content":"<h2 id=\"alpine-makes-it-easy-to-sprinkle-in-interactivity\">Alpine makes it easy to sprinkle in interactivity</h2>\n<p><a href=\"https://github.com/alpinejs/alpine\">AlpineJS</a> is &quot;A rugged, minimal framework for composing JavaScript behavior in your markup&quot;. Once you use a library in one component, you can use it from other components without any additional overhead (since it&#39;s cached from then on).</p>\n","icon":"database"}],"type":"repeater","fields":[{"id":"wzkhx","key":"title","label":"Title","value":"","type":"text"},{"id":"6tdwy","key":"content","label":"Content","value":"","type":"content"},{"id":"f7rq0","key":"icon","label":"Icon","value":"","type":"text"}]}]
+        }
+        import Alpine from 'https://cdn.skypack.dev/alpinejs'</script>
         </div>
+        <style type="text/css">#component-cmtly section {
+    max-width: 1536px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+    #component-cmtly section .top-title {
+      display: flex;
+      flex: 1 1 0%;
+      padding-top: 0.5rem;
+      padding-bottom:0.5rem;
+      font-weight: 600;
+      transition-property: background-color, border-color, color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+      color: rgba(243, 244, 246);
+    }
+    #component-cmtly section .top-title button {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+        font-weight: 600;
+        flex: 1 1 0%;
+        border-right-width: 1px;
+        border-color: rgba(99, 102, 241);
+        background: rgba(79, 70, 229);
+      }
+    #component-cmtly section .top-title button.active, #component-cmtly section .top-title button:hover, #component-cmtly section .top-title button:hover {
+          background: rgba(67, 56, 202);
+        }
+    #component-cmtly section .top-title i {
+        margin-right: 0.25rem;
+      }
+    #component-cmtly section .top-title span {
+        display: inline;
+      }
+    #component-cmtly section .content {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      background-color: rgba(255, 255, 255);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }</style>
       </div>
-      <style type="text/css">
-        #component-axmia section {
-            min-width: auto;
-            max-width: auto;
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-            padding-right: 2rem;
-            padding-left: 2rem;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-          }
-            #component-axmia section .content {
-              display: flex;
-              flex-direction: row;
-              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-              overflow: hidden;
-              background-color: rgba(255, 255, 255);
-            }
-            #component-axmia section .content img {
-                display: block;
-                vertical-align: middle;
-                width: 33.333333%;
-                height: auto;
-                -o-object-position: center;
-                   object-position: center;
-                -o-object-fit: cover;
-                   object-fit: cover;
-                max-width: 100%;
-                border-style: solid;
-              }
-            #component-axmia section .content .heads {
-                flex-direction: column;
-                display: flex;
-                color: rgba(31, 41, 55);
-                padding-left: 2rem;
-                padding-right: 2rem;
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
-                margin-left: 0.5rem;
-                justify-content: center;
-              }
-            #component-axmia section .content .heads h3 {
-                  font-weight: 600;
-                  font-size: 1.5rem;
-                  line-height: 2rem;
-                }
-            #component-axmia section .content .heads p {
-                  color: rgba(75, 85, 99);
-                }
-            #component-axmia section .content .heads .body {
-                  padding-top: 1rem;
-                  margin-top: 0.5rem;
-                  border-top-width: 1px;
-                  border-color: rgba(229, 231, 235);
-                }
-            #component-axmia section .content .heads ul {
-                  display: flex;
-                  margin-top: 1.5rem;
-                  margin-bottom: 1.5rem;
-                }
-            #component-axmia section .content .heads ul li {
-                    color: rgba(255, 255, 255);
-                    padding-left: 1.25rem;
-                    padding-right: 1.25rem;
-                    padding-top: 0.75rem;
-                    padding-bottom: 0.75rem;
-                    margin-right: 0.5rem;
-                    font-weight: 500;
-                    border-radius: 0.25rem;
-                    background-color: rgba(99, 102, 241);
-                  }
-            #component-axmia section .content .heads ul li:hover {
-                    background-color: rgba(79, 70, 229);
-                  }
-          @media (max-width: 600px) {
-              #component-axmia section .content {
-                flex-direction: column;
-              }
-                #component-axmia section .content img {
-                  width: 100%;
-                }
-          }
-      </style>
+      
+      <div class="block" id="block-axmia">
+        <div class="primo-component" id="component-axmia">
+          <div><section>
+  <div class="content">
+    <img
+      src="https://images.unsplash.com/photo-1603279312618-5009a6caf08b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+      alt=""
+    />
+    <div class="heads">
+      <h3>Aenean sed adipiscing diam donec</h3>
+      <p>Etiam sit amet nisl purus in mollis</p>
+      <div class="body"><p>Aenean sed adipiscing diam donec adipiscing tristique. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Sed sed risus pretium quam. Etiam sit amet nisl purus in mollis. Sed cras ornare arcu dui vivamus arcu felis. Dui accumsan sit amet nulla facilisi morbi. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Sit amet nulla facilisi morbi.</p>
+</div>
+      <ul>
+        <li>
+          <a href="#">Tristique</a>
+        </li>
+        <li>
+          <a href="">Commodo</a>
+        </li>
+      </ul>
     </div>
-
-    <div class="block" id="block-zqzmw">
-      <div class="primo-copy" id="copy-zqzmw">
-        <pre><code>New Converted ones.</code></pre>
-      </div>
-    </div>
-
-    <div class="block" id="block-lxbev">
-      <div class="primo-component" id="component-lxbev">
-        <div>
-          <header>
-            <div>
-              <nav>
-                <div>
-                  <a href="/">Egestas</a>
-                  <ul>
-                    <li>
-                      <a href="">Adipiscing</a>
-                    </li>
-                    <li>
-                      <a href="">Commodo</a>
-                    </li>
-                    <li>
-                      <a href="">Imperdiet</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-              <h1>
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Eu turpis egestas pretium</span>
-              </h1>
-            </div>
-          </header>
+  </div>
+</section>
+</div>
+          
         </div>
-      </div>
-      <style type="text/css">
-        #component-lxbev header {
+        <style type="text/css">#component-apegd section {
+    min-width: auto;
+    max-width: auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+    #component-apegd section .content {
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background-color: rgba(255, 255, 255);
+    }
+    #component-apegd section .content img {
+        display: block;
+        vertical-align: middle;
+        width: 33.333333%;
+        height: auto;
+        -o-object-position: center;
+           object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        max-width: 100%;
+        border-style: solid;
+      }
+    #component-apegd section .content .heads {
+        flex-direction: column;
+        display: flex;
+        color: rgba(31, 41, 55);
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-left: 0.5rem;
+        justify-content: center;
+      }
+    #component-apegd section .content .heads h3 {
+          font-weight: 600;
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+    #component-apegd section .content .heads p {
+          color: rgba(75, 85, 99);
+        }
+    #component-apegd section .content .heads .body {
+          padding-top: 1rem;
+          margin-top: 0.5rem;
+          border-top-width: 1px;
+          border-color: rgba(229, 231, 235);
+        }
+    #component-apegd section .content .heads ul {
+          display: flex;
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+    #component-apegd section .content .heads ul li {
             color: rgba(255, 255, 255);
-            padding-bottom: 3rem;
-            padding-top: 1rem;
-            background-image: linear-gradient(to right, #6b7280, #9ca3af);
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            margin-right: 0.5rem;
+            font-weight: 500;
+            border-radius: 0.25rem;
+            background-color: rgba(99, 102, 241);
           }
-            #component-lxbev header div {
-              max-width: 1536px;
-              width: 100%;
-              margin-right: auto;
-              margin-left: auto;
-              padding-right: 2rem;
-              padding-left: 2rem;
-            }
-            #component-lxbev header div nav {
-                padding-bottom: 2rem;
-              }
-            #component-lxbev header div nav div {
-                  display: flex;
-                  justify-content: space-between;
-                }
-            #component-lxbev header a {
-              transition-property: background-color, border-color, color, fill, stroke;
-              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-              font-size: 1.5rem;
-              line-height: 2rem;
-              border-bottom-width: 2px;
-              font-weight: 700;
-              border-color: transparent;
-              background-color: transparent;
-            }
-            #component-lxbev header a:hover {
-              transition-duration: 200ms;
-              border-color: rgba(107, 114, 128);
-            }
-            #component-lxbev header ul {
-              display: flex;
-              align-items: center;
-            }
-            #component-lxbev header li {
-              margin-left: 1rem;
-              font-weight: 600;
-            }
-            #component-lxbev header h1 {
-              display: flex;
-              font-weight: 700;
-              padding-bottom: 0.25rem;
-              line-height: 1;
-              font-size: 2.25rem;
-            }
-            #component-lxbev header svg {
-              display: inline-block;
-              width: 2rem;
-              height: 2rem;
-              margin-right: 0.5rem;
-              align-self: center;
-            }
-      </style>
+    #component-apegd section .content .heads ul li:hover {
+            background-color: rgba(79, 70, 229);
+          }
+  @media (max-width: 600px) {
+      #component-apegd section .content {
+        flex-direction: column;
+      }
+        #component-apegd section .content img {
+          width: 100%;
+        }
+  }</style>
+      </div>
+      
+        <div class="block" id="block-zqzmw">
+          <div class="primo-copy" id="copy-zqzmw">
+            <pre><code>New Converted ones.</code></pre>
+          </div>
+        </div>
+      
+      <div class="block" id="block-lxbev">
+        <div class="primo-component" id="component-lxbev">
+          <div><header>
+  <div>
+    <nav>
+      <div>
+        <a href="/">Egestas</a>
+        <ul>
+          <li>
+            <a href="">Adipiscing</a>
+          </li>
+          <li>
+            <a href="">Commodo</a>
+          </li>
+          <li>
+            <a href="">Imperdiet</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1>
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span>Eu turpis egestas pretium</span>
+    </h1>
+  </div>
+</header>
+</div>
+          
+        </div>
+        <style type="text/css">#component-eldms header {
+    color: rgba(255, 255, 255);
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    background-image: linear-gradient(to right, #6b7280, #9ca3af);
+  }
+    #component-eldms header div {
+      max-width: 1536px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+    #component-eldms header div nav {
+        padding-bottom: 2rem;
+      }
+    #component-eldms header div nav div {
+          display: flex;
+          justify-content: space-between;
+        }
+    #component-eldms header a {
+      transition-property: background-color, border-color, color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 1.5rem;
+      line-height: 2rem;
+      border-bottom-width: 2px;
+      font-weight: 700;
+      border-color: transparent;
+      background-color: transparent;
+    }
+    #component-eldms header a:hover {
+      transition-duration: 200ms;
+      border-color: rgba(107, 114, 128);
+    }
+    #component-eldms header ul {
+      display: flex;
+      align-items: center;
+    }
+    #component-eldms header li {
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+    #component-eldms header h1 {
+      display: flex;
+      font-weight: 700;
+      padding-bottom: 0.25rem;
+      line-height: 1;
+      font-size: 2.25rem;
+    }
+    #component-eldms header svg {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+      align-self: center;
+    }</style>
+      </div>
+      
+      <div class="block" id="block-ivpys">
+        <div class="primo-component" id="component-ivpys">
+          <div><section x-data="loadCards()">
+    <label>
+        <span>Search</span>
+        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        <input
+            x-ref="searchField"
+            x-model="search"
+            placeholder="Search..."
+            type="search">
+        </input>
+    </label>
+  <div class="content" id="search-container">
+    <template x-for="item in filteredCards" :key="item">
+      <figure>
+        <img :src="`${item.image.url}`"/>
+        <div>
+          <div class="title"
+            x-html="item.highlightTitle || item.title"
+          ></div>
+          <div
+            class="subtitle"
+            x-html="item.highlightSubtitle || item.subtitle"
+          ></div>
+        </div>
+      </figure>
+    </template>
+    <template x-if="filteredCards.length === 0">
+    	<div x-show.transition.in="open" class="nofound">No items found</div>
+    </template>
+  </div> 
+</section>
+    
     </div>
-  </body>
-</html>
+          <script type="module">
+        const primo = {
+          id: 'ivpys',
+          data: {"employees":[{"image":{"alt":"","url":"https://picsum.photos/300/300","size":null},"title":"Nibh sed pulvinar","subtitle":"At lectus urna duis convallis convallis. Nibh sed pulvinar proin gravida. Urna neque viverra justo nec."},{"image":{"alt":"","url":"https://picsum.photos/300/200","size":null},"title":"Elementum tempus","subtitle":"Non diam phasellus vestibulum lorem sed risus ultricies. Urna neque viverra justo nec ultrices dui sapien eget mi."},{"image":{"alt":"","url":"https://picsum.photos/250/300","size":null},"title":"Urna neque viverra","subtitle":"Egestas dui id ornare arcu odio ut sem nulla pharetra. Arcu ac tortor dignissim convallis aenean et."}]},
+          fields: [{"id":"tbfwn","key":"employees","label":"Employees","value":[{"image":{"alt":"","url":"https://picsum.photos/300/300","size":null},"title":"Nibh sed pulvinar","subtitle":"At lectus urna duis convallis convallis. Nibh sed pulvinar proin gravida. Urna neque viverra justo nec."},{"image":{"alt":"","url":"https://picsum.photos/300/200","size":null},"title":"Elementum tempus","subtitle":"Non diam phasellus vestibulum lorem sed risus ultricies. Urna neque viverra justo nec ultrices dui sapien eget mi."},{"image":{"alt":"","url":"https://picsum.photos/250/300","size":null},"title":"Urna neque viverra","subtitle":"Egestas dui id ornare arcu odio ut sem nulla pharetra. Arcu ac tortor dignissim convallis aenean et."}],"type":"repeater","fields":[{"id":"d7xot","key":"image","label":"Image","value":"","type":"image"},{"id":"6uxzk","key":"title","label":"Title","value":"","type":"text"},{"id":"ms5nn","key":"subtitle","label":"Subtitle","value":"","type":"text"}]}]
+        }
+        import AlpineJS from 'https://cdn.skypack.dev/alpinejs'
+
+  window.loadCards = () => {
+    return {
+      search: "",
+      cards: primo.data.employees,
+      get filteredCards() {
+        if (this.search === "") {
+          return this.cards;
+        }
+        const filteredCards = this.cards.filter((item) => {
+          const content = `${item.title} ${item.subtitle}`
+          return content
+            .toLowerCase()
+            .includes(this.search.toLowerCase());
+        }) 
+        const withHighlight = filteredCards.map(card => ({
+        	...card,
+            highlightTitle: card.title.replace(this.search, `<mark>${this.search}</mark>`),
+            highlightSubtitle: card.subtitle.replace(this.search, `<mark>${this.search}</mark>`)
+        }))
+        return withHighlight
+      },
+    };
+  }
+</script>
+        </div>
+        <style type="text/css">#component-unuzo section {
+    background-color: rgba(255, 255, 255);
+    max-width: 76%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+    #component-unuzo section label {
+      display: flex;
+      align-items: center;
+    }
+    #component-unuzo section label span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    #component-unuzo section label svg {
+        position: absolute;
+        width: 1.5rem;
+        color: rgba(96, 165, 250);
+        height: 1.5rem;
+      }
+    #component-unuzo section label input {
+        width: 100%;
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        color: rgba(55, 65, 81);
+        padding: 0.75rem 1rem 0.75rem 2rem;
+        border-color: rgba(219, 234, 254);
+        border-bottom-width: 4px;
+        font-weight: 700;
+      }
+    #component-unuzo section label input:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        border-color: rgba(96, 165, 250);
+      }
+    @media (min-width: 768px) {
+      #component-unuzo section .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+        #component-unuzo section .content figure {
+          display: flex;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+          transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+          padding-right: 0.5rem;
+          overflow: hidden;
+          align-items: center;
+          border-radius: 0.25rem;
+        }
+          #component-unuzo section .content figure img {
+            width: 33%;
+            -o-object-position: center;
+               object-position: center;
+            -o-object-fit: cover;
+               object-fit: cover;
+            margin-right: 1rem;
+            height: 100%;
+          }
+          #component-unuzo section .content figure div {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+            #component-unuzo section .content figure div .title {
+              color: rgba(17, 24, 39);
+              margin-bottom: 0.25rem;
+              line-height: 1;
+              font-size: 1.25rem;
+            }
+            #component-unuzo section .content figure div .subtitle {
+              color: rgba(75, 85, 99);
+            }
+        #component-unuzo section .content .nofound {
+          color: rgba(17, 24, 39);
+          padding: 1.5rem;
+          font-weight: 600;
+          background-color: rgba(243, 244, 246);
+        }
+    }</style>
+      </div>
+      
+      <div class="block" id="block-loryx">
+        <div class="primo-component" id="component-loryx">
+          <div><section class="">
+	<div class="content">
+        <h2>Tortor dignissim convallis</h2>
+        <p>Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p>
+        <ul class="sha container" x-data="{selected:null}">
+                <li class="relative border-b border-gray-800">
+                   <button type="button" class="text-xl font-semibold flex w-full justify-between px-8 py-6" @click="selected !== 0 ? selected = 0 : selected = null">
+                        <span class="">Egestas dui id ornare</span>	
+                        <template x-if="selected !== 0">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>                    </template>
+                        <template x-if="selected === 0">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                   
+                        </template>
+                   </button>
+                   <div class="relative overflow-hidden transition-all h-0 duration-200" x-ref="container0" x-bind:style="selected == 0 ? 'height: ' + $refs.container0.scrollHeight + 'px' : ''">
+                        <div class="p-6"><p>Tincidunt vitae semper quis lectus. Tortor dignissim convallis aenean et tortor at. Sit amet aliquam id diam maecenas ultricies mi eget. Ac tortor vitae purus faucibus ornare. Vitae suscipit tellus mauris a. Et netus et malesuada fames ac turpis. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p></div>
+                   </div>
+                </li>
+                <li class="relative border-b border-gray-800">
+                   <button type="button" class="text-xl font-semibold flex w-full justify-between px-8 py-6" @click="selected !== 1 ? selected = 1 : selected = null">
+                        <span class="">Arcu cursus euismod quis viverra</span>	
+                        <template x-if="selected !== 1">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>                    </template>
+                        <template x-if="selected === 1">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                   
+                        </template>
+                   </button>
+                   <div class="relative overflow-hidden transition-all h-0 duration-200" x-ref="container1" x-bind:style="selected == 1 ? 'height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                        <div class="p-6"><p>Potenti nullam ac tortor vitae. Consectetur a erat nam at lectus urna duis. Vel facilisis volutpat est velit egestas dui. Habitant morbi tristique senectus et netus. Porta lorem mollis aliquam ut porttitor. Eu augue ut lectus arcu bibendum at varius. Etiam erat velit scelerisque in. Iaculis at erat pellentesque adipiscing commodo. Ridiculus mus mauris vitae ultricies leo integer malesuada. Morbi leo urna molestie at elementum eu facilisis sed.</p></div>
+                   </div>
+                </li>
+                <li class="relative border-b border-gray-800">
+                   <button type="button" class="text-xl font-semibold flex w-full justify-between px-8 py-6" @click="selected !== 2 ? selected = 2 : selected = null">
+                        <span class="">Volutpat ac tincidunt vitae semper</span>	
+                        <template x-if="selected !== 2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>                    </template>
+                        <template x-if="selected === 2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                   
+                        </template>
+                   </button>
+                   <div class="relative overflow-hidden transition-all h-0 duration-200" x-ref="container2" x-bind:style="selected == 2 ? 'height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                        <div class="p-6"><p>Faucibus scelerisque eleifend donec pretium. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Rhoncus urna neque viverra justo nec ultrices dui.</p></div>
+                   </div>
+                </li>
+                <li class="relative border-b border-gray-800">
+                   <button type="button" class="text-xl font-semibold flex w-full justify-between px-8 py-6" @click="selected !== 3 ? selected = 3 : selected = null">
+                        <span class="">Viverra accumsan in nisl</span>	
+                        <template x-if="selected !== 3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>                    </template>
+                        <template x-if="selected === 3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                   
+                        </template>
+                   </button>
+                   <div class="relative overflow-hidden transition-all h-0 duration-200" x-ref="container3" x-bind:style="selected == 3 ? 'height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                        <div class="p-6"><p>Tincidunt vitae semper quis lectus. Tortor dignissim convallis aenean et tortor at. Sit amet aliquam id diam maecenas ultricies mi eget. Ac tortor vitae purus faucibus ornare. Vitae suscipit tellus mauris a. Et netus et malesuada fames ac turpis. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p></div>
+                   </div>
+                </li>
+        </ul>
+	</div>
+</section></div>
+          <script type="module">
+        const primo = {
+          id: 'loryx',
+          data: {"heading":"Tortor dignissim convallis","subheading":"Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.","cards":[{"title":"Egestas dui id ornare","body":"<p>Tincidunt vitae semper quis lectus. Tortor dignissim convallis aenean et tortor at. Sit amet aliquam id diam maecenas ultricies mi eget. Ac tortor vitae purus faucibus ornare. Vitae suscipit tellus mauris a. Et netus et malesuada fames ac turpis. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p>"},{"title":"Arcu cursus euismod quis viverra","body":"<p>Potenti nullam ac tortor vitae. Consectetur a erat nam at lectus urna duis. Vel facilisis volutpat est velit egestas dui. Habitant morbi tristique senectus et netus. Porta lorem mollis aliquam ut porttitor. Eu augue ut lectus arcu bibendum at varius. Etiam erat velit scelerisque in. Iaculis at erat pellentesque adipiscing commodo. Ridiculus mus mauris vitae ultricies leo integer malesuada. Morbi leo urna molestie at elementum eu facilisis sed.</p>"},{"title":"Volutpat ac tincidunt vitae semper","body":"<p>Faucibus scelerisque eleifend donec pretium. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Rhoncus urna neque viverra justo nec ultrices dui.</p>"},{"title":"Viverra accumsan in nisl","body":"<p>Tincidunt vitae semper quis lectus. Tortor dignissim convallis aenean et tortor at. Sit amet aliquam id diam maecenas ultricies mi eget. Ac tortor vitae purus faucibus ornare. Vitae suscipit tellus mauris a. Et netus et malesuada fames ac turpis. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p>"}]},
+          fields: [{"id":"aamr3","key":"heading","label":"Heading","value":"Tortor dignissim convallis","type":"text","fields":[]},{"id":"l94o4","key":"subheading","label":"Subheading","value":"Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.","type":"text","fields":[]},{"id":"9nw0n","key":"cards","label":"Cards","value":[{"title":"Egestas dui id ornare","body":"<p>Tincidunt vitae semper quis lectus. Tortor dignissim convallis aenean et tortor at. Sit amet aliquam id diam maecenas ultricies mi eget. Ac tortor vitae purus faucibus ornare. Vitae suscipit tellus mauris a. Et netus et malesuada fames ac turpis. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p>"},{"title":"Arcu cursus euismod quis viverra","body":"<p>Potenti nullam ac tortor vitae. Consectetur a erat nam at lectus urna duis. Vel facilisis volutpat est velit egestas dui. Habitant morbi tristique senectus et netus. Porta lorem mollis aliquam ut porttitor. Eu augue ut lectus arcu bibendum at varius. Etiam erat velit scelerisque in. Iaculis at erat pellentesque adipiscing commodo. Ridiculus mus mauris vitae ultricies leo integer malesuada. Morbi leo urna molestie at elementum eu facilisis sed.</p>"},{"title":"Volutpat ac tincidunt vitae semper","body":"<p>Faucibus scelerisque eleifend donec pretium. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Rhoncus urna neque viverra justo nec ultrices dui.</p>"},{"title":"Viverra accumsan in nisl","body":"<p>Tincidunt vitae semper quis lectus. Tortor dignissim convallis aenean et tortor at. Sit amet aliquam id diam maecenas ultricies mi eget. Ac tortor vitae purus faucibus ornare. Vitae suscipit tellus mauris a. Et netus et malesuada fames ac turpis. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Ut ornare lectus sit amet est placerat in egestas erat. Ut sem nulla pharetra diam sit amet nisl.</p>"}],"type":"repeater","fields":[{"id":"wrrh8","key":"title","label":"Title","value":"","type":"text"},{"id":"kkiig","key":"body","label":"Body","value":"","type":"content"}]}]
+        }
+        import AlpineJS from 'https://cdn.skypack.dev/alpinejs'</script>
+        </div>
+        <style type="text/css">#component-xqypy h2:after {
+    content: '';
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+    display: block;
+    height: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3rem;
+  }
+  #component-xqypy section {
+    width: 100%;
+    color: rgba(243, 244, 246);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: rgba(17, 24, 39);
+  }
+  #component-xqypy section media (min-width: 768px) section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+  #component-xqypy section .content {
+      max-width: 90%;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  #component-xqypy section .content h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        font-weight: 700;
+        font-size: 1.875rem;
+      }
+  #component-xqypy section .content p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 28rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+        text-align: center;
+        color: rgba(209, 213, 219);
+        font-size: 0.875rem;
+      }
+  #component-xqypy section .content ul {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }</style>
+      </div>
+      
+        
+        
+      </body>
+    </html>
+  
